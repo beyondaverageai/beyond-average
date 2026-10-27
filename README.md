@@ -174,6 +174,6 @@ Full list: **[docs/tools.md](docs/tools.md)**.
 
 ## License
 
-The docs and config examples in this repository are [MIT licensed](LICENSE). The Beyond Average apps, the `ba` CLI and the MCP server are free to use under the [Beyond Average terms](https://beyondaverage.io/terms).
+The docs and config examples in this repository are [MIT licensed](LICENSE). The Beyond Average apps, the `ba` CLI and the MCP server are free to use under the [Beyond Average terms](https://beyondaverage.io/terms). The Beyond Average name, logo and app icons in `assets/` are trademarks of Beyond Average Studios LLC and are not covered by the MIT license.
 
 Roblox and Roblox Studio are trademarks of Roblox Corporation. Beyond Average is not affiliated with or endorsed by Roblox.

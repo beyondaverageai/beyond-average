@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This license covers the documentation, config examples and scripts in this
-repository. The Beyond Average apps, the ba CLI and the MCP server are not
-part of this repository and are free to use under the Beyond Average terms:
-https://beyondaverage.io/terms. The Beyond Average name, logo and app icons
-in assets/ are trademarks of Beyond Average Studios LLC and are not licensed
-under MIT.
