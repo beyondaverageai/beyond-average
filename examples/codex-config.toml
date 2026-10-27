@@ -1,0 +1,7 @@
+# Add to ~/.codex/config.toml (shared by the Codex CLI, the Codex IDE extension and the ChatGPT desktop app).
+# Replace <you> with your Windows user folder name. Single quotes keep the backslashes literal.
+[mcp_servers.beyond-average]
+command = 'C:\Users\<you>\AppData\Local\Programs\Beyond Average\Beyond Average Hub\BeyondAverageMCP.exe'
+args = []
+startup_timeout_sec = 30
+tool_timeout_sec = 600

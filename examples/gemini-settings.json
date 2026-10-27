@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "beyond-average": {
+      "command": "C:\\Users\\<you>\\AppData\\Local\\Programs\\Beyond Average\\Beyond Average Hub\\BeyondAverageMCP.exe",
+      "args": []
+    }
+  }
+}
