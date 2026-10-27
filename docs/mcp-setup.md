@@ -42,6 +42,10 @@ The server name is always `beyond-average`.
 | [Cursor](#cursor) | Anysphere | `~/.cursor/mcp.json` |
 | [VS Code (Copilot agent mode)](#vs-code-copilot-agent-mode) | Microsoft | user `mcp.json` |
 | [Gemini CLI](#gemini-cli) | Google | `~/.gemini/settings.json` |
+| [Windsurf](#windsurf-kiro-cline-lm-studio) | Windsurf | `~/.codeium/windsurf/mcp_config.json` |
+| [Kiro](#windsurf-kiro-cline-lm-studio) | AWS | `~/.kiro/settings/mcp.json` |
+| [Cline](#windsurf-kiro-cline-lm-studio) | Cline | `cline_mcp_settings.json` |
+| [LM Studio](#windsurf-kiro-cline-lm-studio) | Element Labs | `~/.lmstudio/mcp.json` |
 | [Any other MCP client](#any-other-mcp-client) | | its `mcpServers` config |
 | [ChatGPT on the web](#chatgpt-on-the-web) | OpenAI | not supported (needs a remote server) |
 
@@ -154,9 +158,18 @@ Start a new Gemini CLI session; `/mcp` lists it.
 
 Example file: [`examples/gemini-settings.json`](../examples/gemini-settings.json)
 
+### Windsurf, Kiro, Cline, LM Studio
+
+The Hub connects these too. By hand, add the standard `mcpServers` entry (below) to:
+
+- **Windsurf:** `~/.codeium/windsurf/mcp_config.json`, then press Refresh under MCPs in Cascade.
+- **Kiro:** `~/.kiro/settings/mcp.json` for every workspace (a workspace `.kiro/settings/mcp.json` still wins).
+- **Cline:** `cline_mcp_settings.json`, the file **Configure MCP Servers** opens in Cline.
+- **LM Studio:** `~/.lmstudio/mcp.json` (Program tab → Install → Edit mcp.json); it loads on save.
+
 ### Any other MCP client
 
-Beyond Average is a standard **stdio** MCP server with no arguments and no environment variables. Most clients (Windsurf, Cline, Zed, JetBrains AI Assistant, LM Studio and others) accept the same `mcpServers` shape:
+Beyond Average is a standard **stdio** MCP server with no arguments and no environment variables. Most clients (Zed, JetBrains AI Assistant and others) accept the same `mcpServers` shape:
 
 ```json
 {
