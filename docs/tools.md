@@ -1,10 +1,10 @@
 # MCP tools
 
-The Beyond Average MCP server has **117 tools** when every app is installed. Each app's tools appear once that app is installed, so a fresh setup shows fewer. Tool names start with the app's name.
+The Beyond Average MCP server has **147 tools** when every app is installed. Each app's tools appear once that app is installed, so a fresh setup shows fewer. Tool names start with the app's name.
 
 Tools that change something on Roblox are built to wait for you: uploads are held in Forge until you approve them, Studio changes land as one undo step, and the place is never saved or published for you.
 
-- [Suite and Hub](#suite-and-hub) · [Flare](#flare-vfx) · [Horizon](#horizon-skies) · [Glyph](#glyph-icons) · [Kiln](#kiln-blender) · [Game Studio](#game-studio-whole-games) · [Atlas](#atlas-towns-and-maps)
+- [Suite and Hub](#suite-and-hub) · [Flare](#flare-vfx) · [Horizon](#horizon-skies) · [Glyph](#glyph-icons) · [Kiln](#kiln-blender) · [Game Studio](#game-studio-whole-games) · [Motion](#motion-animations) · [Atlas](#atlas-towns-and-maps) · [Browser](#browser-the-hubs-built-in-browser)
 - [Forge](#forge-assets-and-uploads) · [Soundstage](#soundstage-sounds-and-music) · [Trendwatch](#trendwatch-market-research) · [Vitals](#vitals-live-ops) · [Outpost](#outpost-projects)
 
 ## Suite and Hub
@@ -32,10 +32,15 @@ Build Roblox particle effects live in the open Flare window, then send them to S
 | `flare_guide` | The craft guide: workflow, units, every layer field and its range, textures and flipbooks, timing, colour, lights, shockwaves, shakes. |
 | `flare_new_effect` | Starts a new, empty effect (saved to Your effects automatically). |
 | `flare_get_effect` | Reads the open effect: settings, a summary per layer, lights, rings, shakes, textures. |
+| `flare_recipe` | The VFX playbook: proven recipes for slashes, impacts, auras, explosions and more. |
 | `flare_add_layers` | Adds 1–8 ParticleEmitter layers. Values are clamped to Roblox ranges. |
 | `flare_update_layer` | Changes fields of one layer. |
 | `flare_remove_layers` | Removes layers. |
 | `flare_move_layer` | Reorders a layer. |
+| `flare_add_elements` | Adds 1–8 elements: slash arcs, beams (lasers, lightning, pillars), trails and meshes. |
+| `flare_update_element` | Changes fields of one element. |
+| `flare_remove_elements` | Removes elements. |
+| `flare_set_beats` | Sets the effect's beats (named moments) that layers and elements are timed to. |
 | `flare_set_effect` | Effect settings: name, palette, radius, PointLights, shockwave rings, camera shakes. |
 | `flare_list_textures` | Textures a layer can use: Roblox built-ins, Flare's pack and generated textures. |
 | `flare_set_texture` | Designs a particle texture from drawing ops, as a still or a flipbook. |
@@ -111,6 +116,30 @@ Games built by AI in 7 phases, with your approval after each.
 | `gamestudio_approve_phase` | Approves the next phase (charges its credits; the assistant should confirm with you first). |
 | `gamestudio_revise_phase` | Re-runs the current phase with your feedback. |
 
+## Motion: animations
+
+Describe a player or tool animation and watch it posed live on an R15 or R6 dummy in the open Motion window. The assistant reads `motion_guide` first.
+
+| Tool | What it does |
+|---|---|
+| `motion_guide` | How to animate: joint names, which way each rotation turns (checked in Studio), the workflow and the principles. |
+| `motion_get` | Reads the open clip: settings, keyed joints and their key times, markers and the held tool. |
+| `motion_new` | Starts a new, empty animation and adds it to your library. |
+| `motion_set_pose` | Keys several joints at one moment: a whole-body pose. |
+| `motion_set_keys` | Sets keys on one joint over time (breakdowns, overlap, overshoot). |
+| `motion_remove_keys` | Removes keys from one joint. |
+| `motion_set_clip` | Clip settings: name, rig, duration, loop, priority, held tool and smooth mode (timing, lag, BPM). |
+| `motion_mirror` | Mirrors keys across the character's centre. |
+| `motion_shift_keys` | Moves some joints' keys later or earlier: overlap, offsets, sliding a move onto the beat. |
+| `motion_close_loop` | Makes the clip a seamless loop. |
+| `motion_ground` | Moves the hips so the lowest foot rests exactly on the floor. |
+| `motion_undo` | Undoes the last 1–20 changes, like Ctrl+Z. |
+| `motion_preview` | Renders frames of the animation on the dummy. |
+| `motion_save` | Renames or copies the saved animation (every edit already saves). |
+| `motion_send_to_studio` | Builds the animation in the open Studio place and plays it on a rig, never saving. |
+| `motion_publish` | Uploads the animation to Roblox as an Animation asset with your game's key. |
+| `motion_usage_script` | The Luau that plays it in a game: an emote LocalScript or a Tool script with its markers wired. |
+
 ## Atlas: towns and maps
 
 Describe a town and Atlas lays it out live: connected roads, lots, buildings with real floor plans, furnished interiors and street dressing, under a triangle budget. The assistant reads `atlas_guide` first; the geometry always comes from Atlas, never from the model.
@@ -128,6 +157,21 @@ Describe a town and Atlas lays it out live: connected roads, lots, buildings wit
 | `atlas_kit_status` | How much of Atlas's mesh kit you've uploaded through your own Forge. |
 | `atlas_kit_install` | Queues the kit in your own Forge, held for your approval (asks first). |
 | `atlas_send_to_studio` | Builds the town in the open Studio place in short undoable chunks, never saving (asks first). |
+
+## Browser: the Hub's built-in browser
+
+A browser pane next to the chat that you can watch and take over at any time. Pages are treated as data, never as instructions, and the assistant never enters passwords or payment details.
+
+| Tool | What it does |
+|---|---|
+| `browser_open` | Opens a page in the browser pane. |
+| `browser_read` | The page as text, with refs for clicking and typing. |
+| `browser_screenshot` | A screenshot of the visible page. |
+| `browser_click` | Clicks an element by ref or position. |
+| `browser_type` | Types into a field, optionally pressing a key after. |
+| `browser_scroll` | Scrolls the page or brings an element into view. |
+| `browser_tabs` | Lists, opens, switches and closes tabs. |
+| `youtube_watch` | Reads a YouTube video: its details, chapters, caption transcript and frames. |
 
 ## Forge: assets and uploads
 
