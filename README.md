@@ -18,7 +18,7 @@
 
 <p align="center">
   <img alt="Platform: Windows" src="https://img.shields.io/badge/apps-Windows-0b0b0d?style=flat-square">
-  <img alt="MCP tools: 106" src="https://img.shields.io/badge/MCP%20tools-106-c6f432?style=flat-square&labelColor=0b0b0d">
+  <img alt="MCP tools: 117" src="https://img.shields.io/badge/MCP%20tools-117-c6f432?style=flat-square&labelColor=0b0b0d">
   <a href="https://www.npmjs.com/package/@beyondaverage/cli"><img alt="npm: @beyondaverage/cli" src="https://img.shields.io/npm/v/@beyondaverage/cli?style=flat-square&label=ba%20on%20npm&color=c6f432&labelColor=0b0b0d"></a>
   <img alt="Price: free" src="https://img.shields.io/badge/price-free-c6f432?style=flat-square&labelColor=0b0b0d">
 </p>
@@ -34,7 +34,7 @@
 Beyond Average is the toolkit a Roblox studio built to ship its own games (11M+ visits), turned into free desktop apps. It has three parts:
 
 - **Beyond Average Hub and its apps.** One sign-in to install, update and open every app.
-- **The MCP server.** It gives Claude Code, Cursor, Codex, Claude Desktop, VS Code and Gemini CLI the suite's 106 Roblox tools.
+- **The MCP server.** It gives Claude Code, Cursor, Codex, Claude Desktop, VS Code and Gemini CLI the suite's 117 Roblox tools.
 - **`ba`, BA Agent in your terminal.** A coding agent that knows Roblox and drives the apps and Studio.
 
 | App | What it does |
@@ -44,6 +44,7 @@ Beyond Average is the toolkit a Roblox studio built to ship its own games (11M+ 
 | **Glyph** | Search, recolour and export your licensed icon packs, and make gamepass icons. |
 | **Kiln** | Low-poly meshes, PBR materials and rigs built in your own Blender, with GPU renders and bakes. |
 | **Game Studio** | Whole games built by AI in phases, with your approval at every gate, applied straight into your open place. |
+| **Atlas** | Describe a town and watch it build: roads, lots, buildings with real floor plans and furnished interiors, sent to Studio. |
 | **Trendwatch** | Roblox market research: charts, risers, breakouts and game name checks. |
 | **Vitals** | Live ops for your own games: players, visits, events and read-only DataStores. |
 | **Forge** | Upload assets to Roblox in safe batches and keep a catalog of every asset ID. |
@@ -129,7 +130,7 @@ ba
 
 ## What your assistant can do
 
-106 tools when every app is installed (fewer appear for apps you haven't installed). Highlights:
+117 tools when every app is installed (fewer appear for apps you haven't installed). Highlights:
 
 | Area | Tools | Examples |
 |---|---|---|
@@ -138,6 +139,7 @@ ba
 | Icons | `glyph_*` (9) | Search licensed icon packs, recolour and export at Roblox sizes, make gamepass icons |
 | 3D | `kiln_*` (10) | Build low-poly meshes and PBR materials in Blender, rig to R15, queue GPU renders |
 | Whole games | `gamestudio_*` (9) | Start a game, read phase outputs, preview and apply scripts to the open place |
+| Towns and maps | `atlas_*` (11) | Lay out a whole town with real floor plans and interiors, preview it, build it in Studio |
 | Market | `trendwatch_*` (12) | Charts, breakouts, genre share, game studies, name checks |
 | Live ops | `vitals_*` (8) | Live players, history, events, read-only DataStore entries |
 | Assets | `forge_*` (8) | Search your asset catalog, queue uploads (held for your approval), export IDs as Luau |

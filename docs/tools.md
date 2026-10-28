@@ -1,10 +1,10 @@
 # MCP tools
 
-The Beyond Average MCP server has **106 tools** when every app is installed. Each app's tools appear once that app is installed, so a fresh setup shows fewer. Tool names start with the app's name.
+The Beyond Average MCP server has **117 tools** when every app is installed. Each app's tools appear once that app is installed, so a fresh setup shows fewer. Tool names start with the app's name.
 
 Tools that change something on Roblox are built to wait for you: uploads are held in Forge until you approve them, Studio changes land as one undo step, and the place is never saved or published for you.
 
-- [Suite and Hub](#suite-and-hub) · [Flare](#flare-vfx) · [Horizon](#horizon-skies) · [Glyph](#glyph-icons) · [Kiln](#kiln-blender) · [Game Studio](#game-studio-whole-games)
+- [Suite and Hub](#suite-and-hub) · [Flare](#flare-vfx) · [Horizon](#horizon-skies) · [Glyph](#glyph-icons) · [Kiln](#kiln-blender) · [Game Studio](#game-studio-whole-games) · [Atlas](#atlas-towns-and-maps)
 - [Forge](#forge-assets-and-uploads) · [Soundstage](#soundstage-sounds-and-music) · [Trendwatch](#trendwatch-market-research) · [Vitals](#vitals-live-ops) · [Outpost](#outpost-projects)
 
 ## Suite and Hub
@@ -110,6 +110,24 @@ Games built by AI in 7 phases, with your approval after each.
 | `gamestudio_apply_to_studio` | Puts the scripts into the open place as one undo step. |
 | `gamestudio_approve_phase` | Approves the next phase (charges its credits; the assistant should confirm with you first). |
 | `gamestudio_revise_phase` | Re-runs the current phase with your feedback. |
+
+## Atlas: towns and maps
+
+Describe a town and Atlas lays it out live: connected roads, lots, buildings with real floor plans, furnished interiors and street dressing, under a triangle budget. The assistant reads `atlas_guide` first; the geometry always comes from Atlas, never from the model.
+
+| Tool | What it does |
+|---|---|
+| `atlas_guide` | How to describe a town: the map format, road classes, the 13 building types, the triangle budget and the working steps. |
+| `atlas_get_map` | Reads the open town: settings, roads, lot rows, every lot, parks and plazas, and the build report (buildings, interiors, triangles, problems). |
+| `atlas_new_map` | Opens a new town, live, and saves it to your Library. |
+| `atlas_set_map` | Changes the open town, live and undoable. |
+| `atlas_set_building` | Sets the building on one or more lots. |
+| `atlas_undo` | Steps back through the assistant's map changes. |
+| `atlas_plan` | The floor plan for one building, as text or an image. |
+| `atlas_preview` | Shows the town: a labelled site plan, aerial, street or top view, or inside one building. |
+| `atlas_kit_status` | How much of Atlas's mesh kit you've uploaded through your own Forge. |
+| `atlas_kit_install` | Queues the kit in your own Forge, held for your approval (asks first). |
+| `atlas_send_to_studio` | Builds the town in the open Studio place in short undoable chunks, never saving (asks first). |
 
 ## Forge: assets and uploads
 
