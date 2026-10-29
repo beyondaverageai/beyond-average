@@ -1,10 +1,10 @@
 # MCP tools
 
-The Beyond Average MCP server has **147 tools** when every app is installed. Each app's tools appear once that app is installed, so a fresh setup shows fewer. Tool names start with the app's name.
+The Beyond Average MCP server has **167 tools** when every app is installed. Each app's tools appear once that app is installed, so a fresh setup shows fewer. Tool names start with the app's name.
 
 Tools that change something on Roblox are built to wait for you: uploads are held in Forge until you approve them, Studio changes land as one undo step, and the place is never saved or published for you.
 
-- [Suite and Hub](#suite-and-hub) · [Flare](#flare-vfx) · [Horizon](#horizon-skies) · [Glyph](#glyph-icons) · [Kiln](#kiln-blender) · [Game Studio](#game-studio-whole-games) · [Motion](#motion-animations) · [Atlas](#atlas-towns-and-maps) · [Browser](#browser-the-hubs-built-in-browser)
+- [Suite and Hub](#suite-and-hub) · [Flare](#flare-vfx) · [Horizon](#horizon-skies) · [Glyph](#glyph-icons) · [Kiln](#kiln-blender) · [Game Studio](#game-studio-whole-games) · [Motion](#motion-animations) · [Atlas](#atlas-towns-and-maps) · [Easel](#easel-images) · [Browser](#browser-the-hubs-built-in-browser)
 - [Forge](#forge-assets-and-uploads) · [Soundstage](#soundstage-sounds-and-music) · [Trendwatch](#trendwatch-market-research) · [Vitals](#vitals-live-ops) · [Outpost](#outpost-projects)
 
 ## Suite and Hub
@@ -158,6 +158,32 @@ Describe a town and Atlas lays it out live: connected roads, lots, buildings wit
 | `atlas_kit_install` | Queues the kit in your own Forge, held for your approval (asks first). |
 | `atlas_send_to_studio` | Builds the town in the open Studio place in short undoable chunks, never saving (asks first). |
 
+## Easel: images
+
+A paint.net-class image editor for Roblox art, with layers, selections, adjustments and effects, driven live in the open Easel window. The assistant reads `easel_guide` first. The AI tools cost credits.
+
+| Tool | What it does |
+|---|---|
+| `easel_guide` | How to edit in Easel: the document model, every tool's parameters and the working steps. |
+| `easel_get_document` | Reads the open image: size, layers, the selection. |
+| `easel_preview` | Shows the image, one layer or the selection, optionally zoomed in. |
+| `easel_new_document` | Opens a blank image, or a Roblox preset (icon, thumbnail, badge, pass, decal, UI). |
+| `easel_open` | Opens an image file (PNG, JPG, WebP, BMP, GIF, PSD or .easel). |
+| `easel_layer` | Layer operations: add, duplicate, delete, rename, opacity, blend, reorder, merge, group. |
+| `easel_select` | Selections: rectangle, ellipse, polygon, magic wand, invert, feather, grow. |
+| `easel_paint` | Fills, shapes, live text, brush strokes and gradients. |
+| `easel_adjust` | Adjustments: curves, levels, hue/saturation, brightness/contrast and more. |
+| `easel_effect` | Effects: blurs, sharpen, noise, outline, drop shadow, glow, icon stroke and more. |
+| `easel_transform` | Crop, resize, canvas size, rotate, flip, move and scale. |
+| `easel_extract_object` | Smart Extract: cuts out the object at a point and crops it to a transparent PNG. |
+| `easel_generate` | Generates an image from a prompt as a new layer (credits). |
+| `easel_inpaint` | Regenerates the selected area from a prompt (credits). |
+| `easel_remove_background` | Cuts the subject out onto a new layer. |
+| `easel_upscale` | AI redraw of the whole image at 2x or 4x (credits). |
+| `easel_undo` | Steps back through the assistant's own edits. |
+| `easel_export` | Writes PNG, JPG, WebP, BMP, PSD or .easel, or a Roblox preset. |
+| `easel_send_to_forge` | Exports for Roblox and queues it in Forge as an Image, held for your approval. |
+
 ## Browser: the Hub's built-in browser
 
 A browser pane next to the chat that you can watch and take over at any time. Pages are treated as data, never as instructions, and the assistant never enters passwords or payment details.
@@ -211,6 +237,7 @@ A browser pane next to the chat that you can watch and take over at any time. Pa
 | `trendwatch_game` | One game: stats, player history, chart history, similar games. |
 | `trendwatch_study_game` | Researches a game as the starting point for a new project. |
 | `trendwatch_name_check` | Checks whether a game name is taken on Roblox. |
+| `trendwatch_global_ccu` | Total players on Roblox now and over time (24h, 7d, 30d, all-time), with peaks, the typical day and the split by genre. |
 | `trendwatch_watchlist` | Your watched games with live stats. |
 | `trendwatch_track_game` | Adds a game to the watchlist. |
 | `trendwatch_set_note` | Saves a private note on a game. |
